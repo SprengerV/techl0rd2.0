@@ -1,0 +1,71 @@
+@mixin bg($name, $color) {
+  $bgname: "bg-" + $name;
+  .#{ $bgname } {
+    background-color: darken( $color, 8% )
+  }
+}
+
+@mixin btn($name, $color) {
+  $btnname: "btn-" + $name;
+  $btnolname: "btn-outline-" + $name;
+
+  .#{ $btnname } {
+    color: lighten( $color, 64% );
+    background-color: $color;
+    border-color: darken( $color, 16% );
+  }
+  .#{ $btnname }:hover {
+    color: lighten( $color, 32% );
+    background-color: darken( $color, 4% );
+    border-color: darken( $color, 8% );
+  }
+
+  .#{ $btnolname } {
+    color: darken( $color, 8% );
+    background-color: #ffffff66;
+    border-color: darken( $color, 4% );
+  }
+  .#{ $btnolname }:hover {
+    color: darken( $color, 4% );
+    background-color: #ffffff11;
+    border-color: darken( $color, 2% );
+  } 
+}
+
+@mixin border($name, $color) {
+  #brdrname: "border-" + $name;
+  .#{ $brdrname } {
+    border-color: darken( $color, 4% );
+  }
+}
+
+@mixin nav($name, $color) {
+  $navname: "nav-" + $name;
+  .#{ $navname } {
+    background-color: $color;
+  }
+}
+
+@mixin navbar($name, $color) {
+  $navname: "navbar-" + $name;
+  .#{ $navname } {
+    background-color: darken( $color, 8% );
+  }
+}
+
+@mixin text($name, $color) {
+  $txtname: "text-" + $name;
+  .#{ $txtname } {
+    color: $color;
+    text-decoration: none;
+  }
+}
+
+@each $name, $color in $theme-colors {
+  @include bg($name, $color);
+  @include border($name, $color);
+  @include btn($name, $color);
+  @include nav($name, $color);
+  @include navbar($name, $color);
+  @include text($name, $color);
+}
