@@ -1,6 +1,6 @@
 import matter from 'gray-matter'
 
-export const posts = () =>
+export const content = () =>
   (context => {
     const keys = context.keys();
     const docs = keys.map(context)
