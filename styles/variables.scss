@@ -1,0 +1,21 @@
+$primary:
+$secondary:
+$light:
+$dark:
+$info:
+$alert:
+$danger:
+$success:
+
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'light': $light,
+  'dark': $dark,
+  'info': $info,
+  'alert': $alert,
+  'danger': $danger,
+  'success': $success
+);
+
+$navEdge: dotted;
