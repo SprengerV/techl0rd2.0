@@ -1,0 +1,28 @@
+{
+  "name": "techl0rd2.0",
+  "version": "2.0.0",
+  "description": "A tech blog built with NextJS for SEO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SPrengerV/techl0rd2.0.git"
+  },
+  "author": "Brendan Francis",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/SPrengerV/techl0rd2.0/issues"
+  },
+  "homepage": "https://github.com/SPrengerV/techl0rd2.0#readme",
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "next": "^11.0.1",
+    "raw-loader": "^4.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-markdown": "^6.0.2",
+    "sass": "^1.35.1"
+  }
+}
