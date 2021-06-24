@@ -1,3 +1,6 @@
+# blog content
+content/*.md
+
 # Logs
 logs
 *.log

@@ -15,9 +15,11 @@ const PostTemplate = ({ content, data }) => {
 
 PostTemplate.getInitialProps = async (context) => {
   const { slug  } = context.query
-
+  const post = await import(`../../content/${ slug }.md`)
   return {
     ...matter(post.default),
     slug
   }
 }
+
+export default PostTemplate
