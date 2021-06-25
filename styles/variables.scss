@@ -1,11 +1,11 @@
-$primary:
-$secondary:
-$light:
-$dark:
-$info:
-$alert:
-$danger:
-$success:
+$primary: #0f510d;
+$secondary: #b88e3d;
+$light: #f2e7cb;
+$dark: #c8c3a7;
+$info: #805002;
+$alert: #a4eb00;
+$danger: #fa3b31;
+$success: #049cf7;
 
 $theme-colors: (
   'primary': $primary,
@@ -15,7 +15,7 @@ $theme-colors: (
   'info': $info,
   'alert': $alert,
   'danger': $danger,
-  'success': $success
+  'success': $success,
 );
 
-$navEdge: dotted;
+$navEdge: dashed;
