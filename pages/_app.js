@@ -7,7 +7,9 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <Layout pageTitle="techl0rd Blog" description="Technically driven how-tos.">
       <Navbar/>
-      <Component { ...pageProps }/>
+      <main className="content">
+        <Component { ...pageProps }/>
+      </main>
     </Layout>
   )
 }

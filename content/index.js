@@ -7,7 +7,9 @@ export const content = () =>
 
     return keys
       .map((key, i) => {
-        const slug = key.replace(/^,&[\\\/]/, '')
+        const slug = key
+          .split('.md')
+          .join('')
         const doc = docs[i]
         const {
           data: frontmatter,

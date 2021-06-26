@@ -13,24 +13,30 @@ const Recent = ({ posts }) => {
 const PostsList = ({ content }) => {
   if (!content || !content.length) return <p>No posts found</p>
 
-  return (
-    <ul>
+    return (<>
+    
       { content.map(post => {
         const { frontmatter, slug } = post
         const { title, description, date } = frontmatter
 
-        return (<li key={ slug }>
+        return ( 
           <Link href={ `/posts/${ slug }` }>
             <a>
-              <h3>{ title }</h3>
-              <p>{ date }</p>
-              <p>{ description }</p>
+              <div className="card">
+                <div className="cardHeader text-light nav-info">
+                 { title }
+                </div>
+                <div className="cardBody">
+                  <p>{ date }</p>
+                  <p>{ description }</p>
+                </div>
+              </div>
             </a>
           </Link>
-        </li>) 
+        ) 
       }) } 
-    </ul> 
-  )
+     
+    </>)
 }
 
 export async function getStaticProps() {
