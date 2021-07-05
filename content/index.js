@@ -2,7 +2,7 @@ import matter from 'gray-matter'
 
 export const content = () =>
   (context => {
-    const keys = context.keys();
+    const keys = context.keys()
     const docs = keys.map(context)
 
     return keys
@@ -29,12 +29,12 @@ export const content = () =>
 
 export const categories = () =>
   (context => {
-    const keys = context.keys
+    const keys = context.keys()
     const docs = keys.map(context)
     let cats = []
     docs.forEach(doc => {
       const { data: frontmatter } = matter(doc.default)
-      cats = [...cats, ...frontmatter.category]
+      cats = [...cats, frontmatter.category]
     })
     
     return cats
