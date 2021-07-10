@@ -18,8 +18,8 @@ const pages = {
 
 const Navbar = ({ active }) => {
   return (
-    <nav className="nav navbar-primary border-primary">
-      <div className="navBrand text-light">
+    <nav className="nav navbar-primary border-primary customNavBorder">
+      <div className="navBrand text-success">
         techl0rd
       </div>
       <div className="navigation">

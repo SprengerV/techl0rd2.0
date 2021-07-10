@@ -11,7 +11,7 @@
 
   .#{ $btnname } {
     color: lighten( $color, 64% );
-    background-color: $color;
+    background: linear-gradient(90deg, lighten( $color, 4% ), darken( $color, 8% ) 84%, darken( $color, 16% ) 92%);
     border-color: darken( $color, 16% );
   }
   .#{ $btnname }:hover {
@@ -42,22 +42,28 @@
 @mixin nav($name, $color) {
   $navname: "nav-" + $name;
   .#{ $navname } {
-    background-color: $color;
+    background-image: linear-gradient(180deg, darken( $color, 8% ) 0%, lighten( $color, 8% ) 32%, darken( $color, 4% ) 64%, $color 76%, lighten( $color, 16% ) 90%, darken( $color, 8% ) 94%, darken( $color, 16% ) 100%);
   }
 }
 
 @mixin navbar($name, $color) {
   $navname: "navbar-" + $name;
   .#{ $navname } {
-    background-image: linear-gradient(180deg, darken( $color, 8% ) 0%, darken( $color, 4% ) 32%, $color 84%, darken( $color, 4% ) 100% );
+    background-image: linear-gradient(180deg, darken( $color, 8% ) 0%, darken( $color, 4% ) 32%, $color 88%, darken( $color, 4% ) 96% );
   }
 }
 
 @mixin text($name, $color) {
   $txtname: "text-" + $name;
   .#{ $txtname } {
-    color: $color;
+    color: darken( $color, 4% );
+  }
+  a:hover .#{ $txtname } {
+    color: darken( $color, 16% );
     text-decoration: none;
+  }
+  a:visited .#{ $txtname } {
+    color: darke( $color, 24% );
   }
 }
 

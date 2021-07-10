@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { postsByCat } from '../content'
+import { postsByCat } from '../../content'
 
 const CategoryTemplate = ({ cat, posts }) => {
   
@@ -16,16 +16,14 @@ const CategoryTemplate = ({ cat, posts }) => {
   </>)
 }
 
-export const getStaticProps = async (context) => {
+CategoryTemplate.getInitialProps = async (context) => {
   
   const { cat } = context.query
-  const posts = await postsByCat(cat)
+  const posts = postsByCat(cat)
   
   return {
-    props: {
-      cat,
-      posts 
-    }
+    cat,
+    posts 
   }
 }
 

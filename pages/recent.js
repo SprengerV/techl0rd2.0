@@ -4,8 +4,10 @@ import { content } from '../content'
 
 const Recent = ({ posts }) => {
   return (<>
-    <h2>Recent Posts</h2>  
-    <hr/>
+    <div className="header">
+      <h2 className="heading text-dark">Recent Posts</h2>  
+      <hr className="border-dark"/>
+    </div>
     <PostsList content={ posts }/>
   </>)
 }
@@ -13,30 +15,30 @@ const Recent = ({ posts }) => {
 const PostsList = ({ content }) => {
   if (!content || !content.length) return <p>No posts found</p>
 
-    return (<>
+    return (<div className="recentList border-success">
     
-      { content.map(post => {
+      { content.map((post, i) => {
         const { frontmatter, slug } = post
         const { title, description, date } = frontmatter
 
         return ( 
-          <Link href={ `/posts/${ slug }` }>
-            <a>
-              <div className="card">
-                <div className="cardHeader text-light nav-info">
+          <Link key={ i } href={ `/posts/${ slug }` }>
+            <div className="card border-dark preview">
+              <a>  
+                <div className="cardHeader text-success nav-info">
                  { title }
                 </div>
-                <div className="cardBody">
+              </a>
+                <div className="cardBody text-dark">
                   <p>{ date }</p>
                   <p>{ description }</p>
                 </div>
               </div>
-            </a>
           </Link>
         ) 
       }) } 
      
-    </>)
+    </div>)
 }
 
 export async function getStaticProps() {

@@ -39,3 +39,25 @@ export const categories = () =>
     
     return cats
   })( require.context('./', true, /\.md$/) )
+
+export const postsByCat = (cat) =>
+  (context => {
+    const keys = context.keys()
+    const docs = keys.map(context)
+    let posts = []
+    docs.forEach(doc => {
+      const { data: frontmatter } = matter(doc.default)
+      const { title, date, description, category } = frontmatter
+      const sluggedCat = category.split(' ').join('').toLowerCase()
+      if (sluggedCat === cat) {
+        const post = {
+          title,
+          date,
+          description,
+          category
+        }
+        posts = [...posts, post]
+      }
+    })
+    return posts
+  })( require.context('./', true, /\,md$/) )

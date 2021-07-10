@@ -6,9 +6,9 @@
 }
 
 .card {
-  border: 4px solid $dark;
-  border-radius: 4px;
-  
+  border-width: 4px;
+  border-style: outset;
+  border-radius: 4px;  
   margin: 4vh 2vw 0 2vw;
 }
 
@@ -16,21 +16,46 @@
   padding: 8px;
 }
 
-.cardHeader {
-  width: inherit;
-  height: 2rem;
-  font-size: 32px;
+.cardHeader {  
+  font-size: 24px;
+  padding: 12px;
+  border-bottom: inherit;
 }
 
 .content {
   width: 65vw;
-  margin: 8vh auto auto 8vw;
+  margin: 8vh auto auto auto;
+}
+
+.header {
+  font-size: 32px;
+  position: relative;
+}
+
+.headerDate {
+  display: inline-block;
+  position: relative;
+  right: -24vw;
+  bottom: -32px;
+}
+
+.heading {
+  display: inline-block;
+  position: relative;
+  left: -4vw;
+  bottom: -32px;
+}
+
+.main {
+  border-right-width: 2px;
+  border-right-style: inset;
+  min-height: 32vh; 
 }
 
 .nav {
   width: 100%;
   height: 130px;
-  border-width: 0 0 40px 0;
+  border-width: 0 0 32px 0;
   border-style: $navEdge;
   border-radius: 6px;
   position: relative;
@@ -38,10 +63,10 @@
 
 .navBrand {
   font-size: 48px;
-  
+  font-weight: bolder;  
   display: inline-block;
   position: absolute;
-  left: 20px;
+  left: 52px;
   bottom: -16px;
 }
 
@@ -49,6 +74,7 @@
   @extend .btn;
   border-radius: 0 0 5px 5px;
   margin-left: 8px;
+  width: 12vw;
 }
 
 .navigation {
@@ -62,7 +88,11 @@
   margin: 10px;
 }
 
+.preview {
+  width: 45vw;
+}
+
 .recentList {
-  list-style: none;
-  
+  @extend .main;
+  list-style: none;  
 }
