@@ -12,10 +12,10 @@ const PostTemplate = ({ content, data }) => {
       <p className="headerDate italic">{ date }</p>
       <hr className="border-dark"/>
     </div>
-    <div className="main border-success">
+    <div className="main text-dark border-success">
       <ReactMarkdown
         children={ content }
-        renderers={{ code: CodeBlock }}
+        components={ CodeBlock }
       />
     </div>
   </>)

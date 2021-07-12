@@ -25,7 +25,7 @@ const Navbar = ({ active }) => {
       <div className="navigation">
         { Object.keys(pages).map((key, i) =>
           <Link key={ i } href={ pages[key].path }>
-            <button className="navBtn btn-secondary">{ key }</button>
+            <button className="navBtn btn-info">{ key }</button>
           </Link>
         ) }
       </div>

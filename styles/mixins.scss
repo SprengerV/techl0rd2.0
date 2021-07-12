@@ -42,7 +42,7 @@
 @mixin nav($name, $color) {
   $navname: "nav-" + $name;
   .#{ $navname } {
-    background-image: linear-gradient(180deg, darken( $color, 8% ) 0%, lighten( $color, 8% ) 32%, darken( $color, 4% ) 64%, $color 76%, lighten( $color, 16% ) 90%, darken( $color, 8% ) 94%, darken( $color, 16% ) 100%);
+    background-image: linear-gradient(180deg, darken( $color, 8% ) 0%, lighten( $color, 8% ) 32%, darken( $color, 4% ) 68%, $color 92%, darken( $color, 8% ) 94%, darken( $color, 16% ) 96%);
   }
 }
 
@@ -56,14 +56,13 @@
 @mixin text($name, $color) {
   $txtname: "text-" + $name;
   .#{ $txtname } {
-    color: darken( $color, 4% );
+    color: darken( $color, 8% );
+  }
+  a .#{ $txtname } {
+    color: $color;
   }
   a:hover .#{ $txtname } {
-    color: darken( $color, 16% );
-    text-decoration: none;
-  }
-  a:visited .#{ $txtname } {
-    color: darke( $color, 24% );
+    color: darken( $color, 4% );
   }
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 import '../styles/style.global.scss'
-import '../node_modules/highlight.js/styles/night-owl.css'
+import '../node_modules/react-syntax-highlighter/dist/esm/styles/prism/dracula'
 
 export default function MyApp({ Component, pageProps }) {
   return (

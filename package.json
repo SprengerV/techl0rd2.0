@@ -20,12 +20,12 @@
   "homepage": "https://github.com/SPrengerV/techl0rd2.0#readme",
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "highlight.js": "^11.0.1",
     "next": "^11.0.1",
     "raw-loader": "^4.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-markdown": "^6.0.2",
+    "react-syntax-highlighter": "^15.4.3",
     "sass": "^1.35.1"
   }
 }

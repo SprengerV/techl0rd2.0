@@ -7,19 +7,31 @@
 
 .card {
   border-width: 4px;
-  border-style: outset;
+  border-style: ridge;
   border-radius: 4px;  
   margin: 4vh 2vw 0 2vw;
 }
 
 .cardBody {
-  padding: 8px;
+  margin: 1vh 2vw 1vh 2vw;
 }
 
 .cardHeader {  
   font-size: 24px;
   padding: 12px;
   border-bottom: inherit;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.code {
+  display: block;
+  width: 84%;
+  margin: 4vh auto 4vh auto;
 }
 
 .content {
@@ -29,14 +41,15 @@
 
 .header {
   font-size: 32px;
-  position: relative;
+  position: static;
 }
 
 .headerDate {
   display: inline-block;
   position: relative;
-  right: -24vw;
-  bottom: -32px;
+  right: 0;
+  bottom: -48px;
+  width: 30%;
 }
 
 .heading {
@@ -44,12 +57,15 @@
   position: relative;
   left: -4vw;
   bottom: -32px;
+  width: 70%;
+  
 }
 
 .main {
   border-right-width: 2px;
   border-right-style: inset;
-  min-height: 32vh; 
+  min-height: 32vh;
+  padding: 2%;
 }
 
 .nav {
@@ -68,6 +84,7 @@
   position: absolute;
   left: 52px;
   bottom: -16px;
+  font-family: 'Inconsolatia', monospace;
 }
 
 .navBtn {
@@ -90,9 +107,4 @@
 
 .preview {
   width: 45vw;
-}
-
-.recentList {
-  @extend .main;
-  list-style: none;  
 }

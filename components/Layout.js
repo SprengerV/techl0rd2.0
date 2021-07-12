@@ -8,6 +8,9 @@ export default function Layout({ children, pageTitle, description }) {
       <meta charSet="utf-8"/>
       <meta name="Description" content={ description }/>
       <title>{ pageTitle }</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com"/>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolatia:wght@300&display=swap"/>
     </Head>
     <main>
       { children }

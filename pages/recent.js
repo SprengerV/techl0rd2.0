@@ -15,7 +15,7 @@ const Recent = ({ posts }) => {
 const PostsList = ({ content }) => {
   if (!content || !content.length) return <p>No posts found</p>
 
-    return (<div className="recentList border-success">
+    return (<div className="main border-success">
     
       { content.map((post, i) => {
         const { frontmatter, slug } = post
@@ -23,9 +23,9 @@ const PostsList = ({ content }) => {
 
         return ( 
           <Link key={ i } href={ `/posts/${ slug }` }>
-            <div className="card border-dark preview">
+            <div className="card center border-secondary preview">
               <a>  
-                <div className="cardHeader text-success nav-info">
+                <div className="cardHeader text-light nav-secondary">
                  { title }
                 </div>
               </a>
