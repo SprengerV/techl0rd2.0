@@ -1,17 +1,12 @@
 import React from 'react'
+import Carousel from '../components/Carousel'
+import coins from '../src/coins'
 
-export const Donate = ({ coins }) => {
-  return (
-    { JSON.stringify(coins) }
-  )
+const Donate = () => {
+ 
+  return (<>
+    <Carousel data={ coins }/>    
+  </>)
 }
 
-export const getStaticProps = async () => {
-  const coins = await import('./src/coins.js')
-  
-  return {
-    props: {
-      coins
-    }
-  }
-}
+export default Donate
