@@ -8,6 +8,7 @@
 @mixin btn($name, $color) {
   $btnname: "btn-" + $name;
   $btnolname: "btn-outline-" + $name;
+  $cbtnname: "carouselBtn-" + $name;
 
   .#{ $btnname } {
     color: lighten( $color, 64% );
@@ -30,6 +31,11 @@
     background-color: #ffffff11;
     border-color: darken( $color, 2% );
   } 
+
+  .#{ $cbtnname } {
+    background: linear-gradient(150deg, darken( $color, 16% ) 8%, darken( $color, 8% ) 16%, $color 20%,  lighten( $color, 8% ) 36%, darken( $color, 8% ) 64%, $color 84%, darken( $color, 16% ) 92%);
+    border-color: darken( $color, 8% );
+  }
 }
 
 @mixin border($name, $color) {

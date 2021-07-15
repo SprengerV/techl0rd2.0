@@ -22,20 +22,22 @@ const Carousel = ({ data }) => {
    
     <div className="carousel">
       <img className="carouselImg" src={ current.img }/>
-      <div className="carouselText">
-        <h3 className="coinName center">{ current.name }</h3>
-        <p className="address center">{ current.desc }</p>
-      </div>
-      <div className="navSuccess">
+      <div className="carouselNav nav-success">
+        <div className="carouselBtns">
         { keys.map((key, i) => 
           <button
             key={ i }
-            className="btn-success"
+            className="carouselBtn carouselBtn-success"
             onClick={ () => currentHandler(key) }
           >
             { key }
           </button>            
         ) }
+        </div>  
+      </div>
+      <div className="carouselText">
+        <h3 className="carouselName center">{ current.name }</h3>
+        <p className="carouselDesc center">{ current.desc }</p>
       </div>
     </div>
     

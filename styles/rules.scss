@@ -1,5 +1,6 @@
 .btn {
   padding: 8px 16px 8px 16px;
+  margin: 2px 8px 2px 8px;
   border-radius: 8px;
   border-width: 2px;
   font-weight: bold;
@@ -20,6 +21,40 @@
   font-size: 24px;
   padding: 12px;
   border-bottom: inherit;
+}
+
+.carousel {
+  margin: 16vh auto 4vh auto;
+  width: 84%;
+}
+
+.carouselBtn {
+  @extend .btn;
+  border-radius: 128px 4px 128px 16px;
+}
+
+.carouselBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+
+.carouselImg {
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+.carouselNav {
+  width: 84%;
+  height: 4vh;
+  margin: 0 auto 0 auto;
+  border-radius: 32px 64px 32px 64px;
+}
+
+.carouselText {
+  text-align: center;
+  margin: 2vh auto 2vh auto;
 }
 
 .center {
