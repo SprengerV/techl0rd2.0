@@ -1,3 +1,5 @@
+$navEdge: dashed;
+
 $primary: #0f510d;
 $secondary: #805002;
 $light: #f0f4f7;
@@ -6,6 +8,17 @@ $info: #b88e3d;
 $alert: #a4eb00;
 $danger: #fa3b31;
 $success: #e1ebfc;
+
+$zero: #000000;
+$one: #333333;
+$two: #666666;
+$three: #999999;
+$four: #cccccc;
+$five: #eeeeee;
+$six: #f2f2f2;
+$seven: #FFFFFF;
+
+$background: $six;
 
 $theme-colors: (
   'primary': $primary,
@@ -18,4 +31,14 @@ $theme-colors: (
   'success': $success,
 );
 
-$navEdge: dashed;
+$grayscale: (
+  '0': $zero,
+  '1': $one,
+  '2': $two,
+  '3': $three,
+  '4': $four,
+  '5': $five,
+  '6': $six,
+  '7': $seven
+);
+

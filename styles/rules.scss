@@ -1,3 +1,13 @@
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;  
+  min-width: 100vw;
+  min-width: -webkit-fill-available;
+  background-color: $background;
+}
+
 .btn {
   padding: 8px 16px 8px 16px;
   margin: 2px 8px 2px 8px;
@@ -17,14 +27,22 @@
   margin: 1vh 2vw 1vh 2vw;
 }
 
-.cardHeader {  
+.cardHeader { 
+  border-radius: 32px 128px 32px 128px;
   font-size: 24px;
   padding: 12px;
-  border-bottom: inherit;
+  width: 104%;
+  position: relative;
+  left: -4%;
+  top: -8px;
+}
+
+.cardHeading {
+  margin-left: 32px;
 }
 
 .carousel {
-  margin: 16vh auto 4vh auto;
+  margin: 16vh auto 16vh auto;
   width: 84%;
 }
 
@@ -42,7 +60,7 @@
 
 .carouselImg {
   display: block;
-  margin: 0 auto 0 auto;
+  margin: 2vh auto 2vh auto;
 }
 
 .carouselNav {
@@ -55,6 +73,24 @@
 .carouselText {
   text-align: center;
   margin: 2vh auto 2vh auto;
+  padding-bottom: 2vh;
+}
+
+.category {
+  width: 55vw; 
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 64vh;
+}
+
+.catPost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .center {
@@ -108,7 +144,7 @@
   height: 130px;
   border-width: 0 0 32px 0;
   border-style: $navEdge;
-  border-radius: 6px;
+  border-radius: 0 0 6px 6px;
   position: relative;
 }
 

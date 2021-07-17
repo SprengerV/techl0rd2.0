@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import coins from '../src/coins'
 
 const Carousel = ({ data }) => {
   
@@ -20,7 +19,7 @@ const Carousel = ({ data }) => {
 
   return (<>
    
-    <div className="carousel">
+    <div className="carousel card bg-7 border-4">
       <img className="carouselImg" src={ current.img }/>
       <div className="carouselNav nav-success">
         <div className="carouselBtns">

@@ -1,7 +1,7 @@
 @mixin bg($name, $color) {
   $bgname: "bg-" + $name;
   .#{ $bgname } {
-    background-color: darken( $color, 8% )
+    background-color: $color
   }
 }
 
@@ -62,17 +62,30 @@
 @mixin text($name, $color) {
   $txtname: "text-" + $name;
   .#{ $txtname } {
+    text-decoration: none;
     color: darken( $color, 8% );
   }
   a .#{ $txtname } {
+    text-decoration: none; 
     color: $color;
   }
   a:hover .#{ $txtname } {
+    text-decoration: none;
     color: darken( $color, 4% );
   }
 }
 
 @each $name, $color in $theme-colors {
+  @include bg($name, $color);
+  @include border($name, $color);
+  @include btn($name, $color);
+  @include nav($name, $color);
+  @include navbar($name, $color);
+  @include text($name, $color);
+}
+
+
+@each $name, $color in $grayscale {
   @include bg($name, $color);
   @include border($name, $color);
   @include btn($name, $color);

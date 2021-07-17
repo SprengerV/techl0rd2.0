@@ -23,7 +23,7 @@ export const content = () =>
         }
       })
       .sort((p1, p2) => {
-        new Date(p2.frontmatter.date) - new Data(p1.frontmatter.date)
+        new Date(p2.frontmatter.date) - new Date(p1.frontmatter.date)
       })
   })( require.context('./', true, /\.md$/) )
 
@@ -31,10 +31,23 @@ export const categories = () =>
   (context => {
     const keys = context.keys()
     const docs = keys.map(context)
-    let cats = []
-    docs.forEach(doc => {
+    let cats = {}
+    docs.forEach((doc, i) => {
+      const slug = keys[i]
+        .split('.md')
+        .join('')
       const { data: frontmatter } = matter(doc.default)
-      cats = [...cats, frontmatter.category]
+      const { title, category, description, date } = frontmatter
+      const blurb = {
+        title,
+        description,
+        date,
+        slug
+      }
+      cats[category] ?
+        cats[category].push(blurb)
+        :
+        cats[category] = [blurb]
     })
     
     return cats
